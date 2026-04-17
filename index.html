@@ -1,103 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AgroVet Pro — Kenya Stock Manager</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>AgroVet Pro — Kenya Stock Manager</title>
 
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
+    
+    <link rel="manifest" href="manifest.json">
 
-<link rel="manifest" href="manifest.json">
-
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Fraunces:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-  <div class="logo">
-    <div class="logo-mark">🌿</div>
-    <div><h1>AgroVet Pro</h1><p>Kenya Stock Management System</p></div>
-  </div>
-  <div class="hbtns">
-    <button class="hbtn hbtn-ghost" onclick="window.print()">🖨 Print</button>
-    <button class="hbtn hbtn-ghost" onclick="downloadBackup()">💾 Backup</button>
-    <button class="hbtn hbtn-green" onclick="openAdd()">+ Add Product</button>
-  </div>
+    <div class="logo">
+        <div class="logo-mark">🌿</div>
+        <div><h1>AgroVet Pro</h1><p>Kenya Stock Manager</p></div>
+    </div>
+    <div class="hbtns">
+        <button class="hbtn hbtn-ghost" onclick="window.print()">🖨 Print</button>
+        <button class="hbtn hbtn-ghost" onclick="downloadBackup()">💾 Backup</button>
+        <button class="hbtn hbtn-green" onclick="openAdd()">+ Add Product</button>
+    </div>
 </header>
 
 <div class="page">
-  <aside class="sidebar">
-    <div style="padding:0 .6rem;">
-      <div class="sl">Categories</div>
-      <button class="cb active" data-cat="all" onclick="setcat('all')">🗂 All Products <span class="cc" id="cnt-all">0</span></button>
-      <button class="cb" data-cat="Animal Feeds" onclick="setcat('Animal Feeds')">🌾 Animal Feeds <span class="cc" id="cnt-af">0</span></button>
-      <button class="cb" data-cat="Veterinary Medicines" onclick="setcat('Veterinary Medicines')">💊 Vet Medicines <span class="cc" id="cnt-vm">0</span></button>
-      <button class="cb" data-cat="Pesticides & Herbicides" onclick="setcat('Pesticides & Herbicides')">🧴 Pesticides <span class="cc" id="cnt-ph">0</span></button>
-      <button class="cb" data-cat="Insecticides" onclick="setcat('Insecticides')">🐛 Insecticides <span class="cc" id="cnt-ins">0</span></button>
-      <button class="cb" data-cat="Fungicides" onclick="setcat('Fungicides')">🍄 Fungicides <span class="cc" id="cnt-fun">0</span></button>
-      <button class="cb" data-cat="Foliar Feeds" onclick="setcat('Foliar Feeds')">🌿 Foliar Feeds <span class="cc" id="cnt-fol">0</span></button>
-      <button class="cb" data-cat="Plant Boosters" onclick="setcat('Plant Boosters')">⚡ Plant Boosters <span class="cc" id="cnt-pb">0</span></button>
-      <button class="cb" data-cat="Seeds & Fertilizers" onclick="setcat('Seeds & Fertilizers')">🌱 Seeds & Fert <span class="cc" id="cnt-sf">0</span></button>
-      <button class="cb" data-cat="Farm Tools & Equipment" onclick="setcat('Farm Tools & Equipment')">🔧 Tools <span class="cc" id="cnt-te">0</span></button>
-    </div>
-  </aside>
+    <aside class="sidebar">
+        <div class="cat-container">
+            <div class="sl">Categories</div>
+            <button class="cb active" data-cat="all" onclick="setcat('all')">🗂 All Products <span class="cc" id="cnt-all">0</span></button>
+            <button class="cb" data-cat="Animal Feeds" onclick="setcat('Animal Feeds')">🌾 Feeds <span class="cc" id="cnt-af">0</span></button>
+            <button class="cb" data-cat="Veterinary Medicines" onclick="setcat('Veterinary Medicines')">💊 Vet Meds <span class="cc" id="cnt-vm">0</span></button>
+            <button class="cb" data-cat="Pesticides & Herbicides" onclick="setcat('Pesticides & Herbicides')">🧴 Pesticides <span class="cc" id="cnt-ph">0</span></button>
+            <button class="cb" data-cat="Insecticides" onclick="setcat('Insecticides')">🐛 Insecticides <span class="cc" id="cnt-ins">0</span></button>
+            <button class="cb" data-cat="Fungicides" onclick="setcat('Fungicides')">🍄 Fungicides <span class="cc" id="cnt-fun">0</span></button>
+            <button class="cb" data-cat="Foliar Feeds" onclick="setcat('Foliar Feeds')">🌿 Foliar <span class="cc" id="cnt-fol">0</span></button>
+            <button class="cb" data-cat="Plant Boosters" onclick="setcat('Plant Boosters')">⚡ Boosters <span class="cc" id="cnt-pb">0</span></button>
+            <button class="cb" data-cat="Seeds & Fertilizers" onclick="setcat('Seeds & Fertilizers')">🌱 Seeds <span class="cc" id="cnt-sf">0</span></button>
+            <button class="cb" data-cat="Farm Tools & Equipment" onclick="setcat('Farm Tools & Equipment')">🔧 Tools <span class="cc" id="cnt-te">0</span></button>
+        </div>
+    </aside>
 
-  <div class="content">
-    <div class="stats" id="stats"></div>
-    <div class="ab hidden" id="abar"><span>⚠️</span><div><strong>Attention Required</strong><br><span id="ab2" style="font-size:12px;">Items highlighted in orange need restocking.</span></div></div>
-    
-    <div class="toolbar">
-      <div class="sb"><input type="text" id="q" placeholder="Search product or SKU..." oninput="render()"></div>
-      <select class="ts" id="stf" onchange="render()">
-        <option value="all">All Levels</option>
-        <option value="ok">In Stock</option>
-        <option value="low">Low Stock</option>
-        <option value="out">Out of Stock</option>
-      </select>
-    </div>
+    <div class="content">
+        <div class="stats" id="stats"></div>
+        
+        <div class="toolbar">
+            <div class="sb"><input type="text" id="q" placeholder="Search product..." oninput="render()"></div>
+            <select class="ts" id="stf" onchange="render()">
+                <option value="all">All Stock</option>
+                <option value="ok">In Stock</option>
+                <option value="low">Low Stock</option>
+                <option value="out">Out of Stock</option>
+            </select>
+        </div>
 
-    <div class="tcard">
-      <table>
-        <thead>
-          <tr>
-            <th>Product</th>
-            <th>Category</th>
-            <th>Stock</th>
-            <th>Buying (Ksh)</th>
-            <th>Selling (Ksh)</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody id="tbody"></tbody>
-      </table>
+        <div class="tcard">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Stock</th>
+                        <th>Price</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody"></tbody>
+            </table>
+        </div>
     </div>
-  </div>
 </div>
 
 <div class="overlay" id="pmod">
-  <div class="modal">
-    <h2 id="mtitle">Product Details</h2>
-    <div class="fg">
-        <input type="hidden" id="eid">
-        <input type="text" id="fn" placeholder="Product Name">
-        <input type="text" id="fsk" placeholder="SKU">
-        <select id="fc">
-            <option>Animal Feeds</option><option>Veterinary Medicines</option>
-            <option>Pesticides & Herbicides</option><option>Insecticides</option>
-            <option>Fungicides</option><option>Foliar Feeds</option>
-            <option>Plant Boosters</option><option>Seeds & Fertilizers</option>
-            <option>Farm Tools & Equipment</option>
-        </select>
-        <input type="number" id="fq" placeholder="Initial Qty">
-        <input type="text" id="fu" placeholder="Unit (Kg, Bag, etc)">
-        <input type="number" id="fb" placeholder="Buying Price">
-        <input type="number" id="fs" placeholder="Selling Price">
-        <input type="number" id="fth" placeholder="Min Alert Level" value="5">
-        <button class="hbtn hbtn-green" onclick="savep()">Save Product</button>
-        <button onclick="cm('pmod')" style="background:none; border:none; color:gray; cursor:pointer;">Cancel</button>
+    <div class="modal">
+        <h2 id="mtitle">Product Details</h2>
+        <div class="fg">
+            <input type="hidden" id="eid">
+            <input type="text" id="fn" placeholder="Product Name">
+            <input type="text" id="fsk" placeholder="SKU">
+            <select id="fc">
+                <option>Animal Feeds</option><option>Veterinary Medicines</option>
+                <option>Pesticides & Herbicides</option><option>Insecticides</option>
+                <option>Fungicides</option><option>Foliar Feeds</option>
+                <option>Plant Boosters</option><option>Seeds & Fertilizers</option>
+                <option>Farm Tools & Equipment</option>
+            </select>
+            <input type="number" id="fq" placeholder="Qty">
+            <input type="text" id="fu" placeholder="Unit (e.g. Kg)">
+            <input type="number" id="fb" placeholder="Buying Price">
+            <input type="number" id="fs" placeholder="Selling Price">
+            <input type="number" id="fth" placeholder="Min Alert" value="5">
+            <button class="hbtn hbtn-green" onclick="savep()">Save Product</button>
+            <button class="hbtn hbtn-ghost" onclick="cm('pmod')">Cancel</button>
+        </div>
     </div>
-  </div>
 </div>
 
 <script src="script.js"></script>

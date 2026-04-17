@@ -1,0 +1,15 @@
+{
+  "name": "AgroVet Pro Kenya",
+  "short_name": "AgroVet",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#1a3a0a",
+  "theme_color": "#1a3a0a",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/1864/1864470.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

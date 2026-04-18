@@ -38,7 +38,6 @@ header {
 .page { display: flex; flex-direction: column; min-height: 100vh; }
 @media (min-width: 769px) { .page { flex-direction: row; } }
 
-/* SIDEBAR & MOBILE CATEGORIES */
 .sidebar { width: 100%; background: white; border-bottom: 1px solid #eee; padding: 10px 0; position: sticky; top: 115px; z-index: 900; }
 @media (min-width: 769px) {
     .sidebar { width: 260px; border-right: 1px solid #eee; border-bottom: none; height: calc(100vh - 70px); top: 70px; }
@@ -63,7 +62,6 @@ header {
 
 .content { flex: 1; padding: 1rem; width: 100%; max-width: 1200px; margin: 0 auto; }
 
-/* STAT CARDS */
 .stats { display: grid; grid-template-columns: 1fr; gap: 10px; margin-bottom: 1.5rem; }
 @media (min-width: 480px) { .stats { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); } }
 
@@ -77,10 +75,9 @@ header {
 .sb input, .ts { width: 100%; padding: 12px; border-radius: 10px; border: 1px solid #ddd; outline: none; font-size: 14px; }
 .ts { background: white; }
 
-/* TABLE FIXES */
 .tcard { background: white; border-radius: 12px; border: 1px solid #eee; overflow: hidden; }
 .table-scroll { overflow-x: auto; width: 100%; }
-table { width: 100%; border-collapse: collapse; min-width: 600px; } /* Ensures room for all columns */
+table { width: 100%; border-collapse: collapse; min-width: 650px; } 
 th { background: #fcfcfc; padding: 12px 15px; font-size: 11px; text-transform: uppercase; color: #888; border-bottom: 1px solid #eee; text-align: left; }
 td { padding: 12px 15px; border-bottom: 1px solid #f9f9f9; font-size: 14px; }
 
@@ -88,9 +85,9 @@ td { padding: 12px 15px; border-bottom: 1px solid #f9f9f9; font-size: 14px; }
 .dok { background: var(--ok); } .dlo { background: var(--low); } .dou { background: var(--out); }
 
 .acts { display: flex; gap: 5px; }
-.ab2 { padding: 8px; border-radius: 8px; border: 1px solid #eee; background: #fff; cursor: pointer; }
+.ab2 { padding: 8px; border-radius: 8px; border: 1px solid #eee; background: #fff; cursor: pointer; transition: 0.2s; }
+.ab2:hover { background: #f0f0f0; }
 
-/* MODAL */
 .overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.6); display: none; align-items: center; justify-content: center; z-index: 2000; padding: 15px; }
 .overlay.open { display: flex; }
 .modal { background: white; padding: 1.5rem; border-radius: 15px; width: 100%; max-width: 450px; max-height: 90vh; overflow-y: auto; }

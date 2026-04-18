@@ -4,11 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>AgroVet Pro — Kenya Stock Manager</title>
-
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
-    
-    <link rel="manifest" href="manifest.json">
-
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -44,7 +40,20 @@
     </aside>
 
     <div class="content">
-        <div class="stats" id="stats"></div>
+        <div class="stats" id="stats">
+            <div class="sc">
+                <small>Total Cash Sales</small>
+                <div class="sv" id="stat-sales">Ksh 0</div>
+            </div>
+            <div class="sc">
+                <small>Stock Value</small>
+                <div class="sv" id="stat-value">Ksh 0</div>
+            </div>
+            <div class="sc">
+                <small>Low Stock Alerts</small>
+                <div class="sv" style="color: #e74c3c;" id="stat-low">0</div>
+            </div>
+        </div>
         
         <div class="toolbar">
             <div class="sb"><input type="text" id="q" placeholder="Search product..." oninput="render()"></div>
@@ -57,17 +66,20 @@
         </div>
 
         <div class="tcard">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Product</th>
-                        <th>Stock</th>
-                        <th>Price</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody id="tbody"></tbody>
-            </table>
+            <div class="table-scroll">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="min-width: 160px;">Product Name</th>
+                            <th>Stock</th>
+                            <th>Buying</th>
+                            <th>Selling</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody"></tbody>
+                </table>
+            </div>
         </div>
     </div>
 </div>
@@ -92,7 +104,7 @@
             <input type="number" id="fs" placeholder="Selling Price">
             <input type="number" id="fth" placeholder="Min Alert" value="5">
             <button class="hbtn hbtn-green" onclick="savep()">Save Product</button>
-            <button class="hbtn hbtn-ghost" onclick="cm('pmod')">Cancel</button>
+            <button class="hbtn hbtn-ghost" style="color:black; border:1px solid #ddd" onclick="cm('pmod')">Cancel</button>
         </div>
     </div>
 </div>
